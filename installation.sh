@@ -38,10 +38,11 @@ cp -r dunst ~/.config
 echo copied dunst to ~/.config
 
 #libinput
+sudo cp 50-my-screensaver.conf /etc/X11/xorg.conf.d
 if [device == l]
 then
 	sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d
-	echo copied 30-touchpad.conf to /etc/X11/xorg.conf.d
+	echo "copied 30-touchpad.conf & 50-my-screensaver.conf to /etc/X11/xorg.conf.d"
 fi
 
 #xmodmap
