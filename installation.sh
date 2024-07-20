@@ -17,6 +17,10 @@ sudo pacman -S dunst
 cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
+#background
+mkdir ~/dotfiles
+cp backgrounds ~/dotfiles
+
 #vim config
 if [vim == y]
 then
