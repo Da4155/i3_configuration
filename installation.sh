@@ -18,8 +18,11 @@ cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
 #vim config
-cp vimrc ~/.vimrc
-echo copied .vimrc to ~
+if [vim == y]
+then
+	cp vimrc ~/.vimrc
+	echo copied .vimrc to ~
+fi
 
 #polybar config
 chmod +x polybar/launch.sh
@@ -31,10 +34,17 @@ cp -r dunst ~/.config
 echo copied dunst to ~/.config
 
 #libinput
-sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d
-echo copied 30-touchpad.conf to /etc/X11/xorg.conf.d
+if [device == l]
+then
+	sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d
+	echo copied 30-touchpad.conf to /etc/X11/xorg.conf.d
+fi
 
 #xmodmap
-chmod +x Xmodmap
-cp Xmodmap ~/.config/.Xmodmap
-echo copied .Xmodmap tp ~/.config
+if [xmodmap == y]
+then
+	sudo pacman -S xmodmap
+	chmod +x Xmodmap
+	cp Xmodmap ~/.config/.Xmodmap
+	echo copied .Xmodmap tp ~/.config
+fi
