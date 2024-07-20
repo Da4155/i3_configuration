@@ -18,7 +18,7 @@ cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
 #vim config
-cp vimrc ~
+cp vimrc ~/.vimrc
 echo copied .vimrc to ~
 
 #polybar config
@@ -36,5 +36,5 @@ echo copied 30-touchpad.conf to /etc/X11/xorg.conf.d
 
 #xmodmap
 chmod +x Xmodmap
-cp Xmodmap ~/.config
+cp Xmodmap ~/.config/.Xmodmap
 echo copied .Xmodmap tp ~/.config
