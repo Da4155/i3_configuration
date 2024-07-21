@@ -11,7 +11,9 @@ sudo pacman -S polybar
 sudo pacman -S rofi
 sudo pacman -S picom
 sudo pacman -S dunst
-
+sudo pacman -S yad
+sudo pacman -S xdotool
+sudo pacman -S alacritty
 
 #i3 configuration files
 cp -r i3 ~/.config
@@ -30,9 +32,10 @@ fi
 #polybar config
 chmod +x lap/polybar/launch.sh
 chmod +x pc/polybar/launch.sh
+chmod +x polybar-scripts/popup-calendar.sh
 
 if [ $device == 2 ]; then   
-	cp -r /lap/polybar ~/.config
+	cp -r lap/polybar ~/.config
 else
 	cp -r pc/polybar ~/.config
 fi
