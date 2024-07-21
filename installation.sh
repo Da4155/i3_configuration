@@ -31,6 +31,7 @@ fi
 #polybar config
 chmod +x polybar/launch.sh
 cp -r polybar ~/.config
+cp -r polybar-scripts ~ 
 echo copied polybar to ~/.config
 
 #dunst config
