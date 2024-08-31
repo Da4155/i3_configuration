@@ -6,22 +6,16 @@ read -p "do you want to use vim (yes=1 no=2)? 1/2" vim
 read -p "would you like remaped keys (yes=1 no=2)? 1/2" xmodmap
 
 #installation of required programs for i3
-sudo pacman -S feh
-sudo pacman -S polybar
-sudo pacman -S rofi
-sudo pacman -S picom
-sudo pacman -S dunst
-sudo pacman -S yad
-sudo pacman -S xdotool
-sudo pacman -S alacritty
+sudo pacman -S feh polybar rofi picom dunst yad xdotool alacritty
 
 #i3 configuration files
 cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
 #background
-mkdir ~/dotfiles
-cp backgrounds ~/dotfiles
+mkdir ~/Bilder/backgrounds
+mkdir ~/Bilder/backgrounds/animated
+cp backgrounds ~/Bilder/backgrounds/animated
 
 #vim config
 if [ $vim == "1" ]; then
@@ -32,7 +26,6 @@ fi
 #polybar config
 chmod +x lap/polybar/launch.sh
 chmod +x pc/polybar/launch.sh
-chmod +x polybar-scripts/popup-calendar.sh
 
 if [ $device == 2 ]; then   
 	cp -r lap/polybar ~/.config
@@ -40,8 +33,11 @@ else
 	cp -r pc/polybar ~/.config
 fi
 
-cp -r polybar-scripts ~ 
-echo copied polybar to ~/.config
+#rofi
+cp rofi ~/.config
+
+#scripts
+cp scripts ~/.scripts
 
 #dunst config
 cp -r dunst ~/.config
@@ -53,6 +49,9 @@ if [ $device == 2 ]; then
 	sudo cp 30-touchpad.conf /etc/X11/xorg.conf.d
 	echo "copied 30-touchpad.conf & 50-my-screensaver.conf to /etc/X11/xorg.conf.d"
 fi
+
+#fonts
+cp -r fonts .local/share/
 
 #xmodmap
 if [ $xmodmap == "1" ]; then
