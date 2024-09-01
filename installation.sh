@@ -55,7 +55,7 @@ if [ $device == 2 ]; then
 fi
 
 #fonts
-cp -r fonts .local/share/
+cp -r fonts ~/.local/share/
 
 #xmodmap
 if [ $xmodmap == "1" ]; then
