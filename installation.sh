@@ -13,7 +13,7 @@ cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
 #background
-cp - backgrounds ~/Bilder
+cp -r backgrounds ~/Bilder
 
 #vim config
 if [ $vim == "1" ]; then
