@@ -37,6 +37,12 @@ fi
 cp rofi ~/.config
 
 #scripts
+chmod +x /scripts/generate_pngs.sh
+chmod +x /scripts/launcher.sh
+chmod +x /scripts/loop_pngs.sh
+chmod +x /scripts/powermenu.sh
+chmod +x /scripts/styles.sh
+chmod +x /scripts/style-switch.sh
 cp scripts ~/.scripts
 
 #dunst config
