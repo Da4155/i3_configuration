@@ -13,9 +13,7 @@ cp -r i3 ~/.config
 echo copied i3 to ~/.config 
 
 #background
-mkdir ~/Bilder/backgrounds
-mkdir ~/Bilder/backgrounds/animated
-cp backgrounds ~/Bilder/backgrounds/animated
+cp - backgrounds ~/Bilder
 
 #vim config
 if [ $vim == "1" ]; then
@@ -34,7 +32,7 @@ else
 fi
 
 #rofi
-cp rofi ~/.config
+cp -r rofi ~/.config
 
 #scripts
 chmod +x scripts/generate_pngs.sh
@@ -43,7 +41,7 @@ chmod +x scripts/loop_pngs.sh
 chmod +x scripts/powermenu.sh
 chmod +x scripts/styles.sh
 chmod +x scripts/style-switch.sh
-cp scripts ~/.scripts
+cp -r scripts ~/.scripts
 
 #dunst config
 cp -r dunst ~/.config
