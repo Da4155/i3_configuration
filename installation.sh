@@ -6,7 +6,7 @@ read -p "do you want to use vim (yes=1 no=2)? 1/2" vim
 read -p "would you like remaped keys (yes=1 no=2)? 1/2" xmodmap
 
 #installation of required programs for i3
-sudo pacman -S feh polybar rofi picom dunst yad xdotool alacritty
+sudo pacman -S feh polybar rofi picom dunst yad xdotool alacritty imagemagick
 
 #i3 configuration files
 cp -r i3 ~/.config
